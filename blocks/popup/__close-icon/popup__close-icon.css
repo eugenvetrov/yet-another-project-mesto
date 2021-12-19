@@ -1,0 +1,25 @@
+.popup__close-icon {
+    position: relative;
+    background: none;
+    width: 32px;
+    min-height: 32px;
+    top: -32px;
+    left: 430px;
+    border: none;
+    background-image: url(../../../images/close-icon.png);
+}
+
+.popup__close-icon:hover {
+    opacity: .6;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 900px){
+    .popup__close-icon {
+        width: 20px;
+        min-height: 20px;
+        top: -36px;
+        left: 262px;
+        background-image: url(../../../images/close-icon-mobile.png);
+    }
+}
