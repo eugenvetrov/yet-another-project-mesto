@@ -20,39 +20,19 @@
         <button class="profile__add" type="button"></button>
     </section>
     <section class="group">
-        <article class="group__rectangle">
-            <img src="./images/respublika_comi.jpg" class="group__image" alt="Республика Коми">
-            <h2 class="group__name" title="Республика Коми">Республика Коми</h2>
-            <button class="group__like" type="button"><img class="group__like-icon" src="./images/like.svg" alt="Отметить как понравившееся"></button>
-        </article>
-        <article class="group__rectangle">
-            <img src="./images/baikal-lake.jpg" class="group__image" alt="Озеро Байкал">
-            <h2 class="group__name" title="Озеро Байкал">Озеро Байкал</h2>
-            <button class="group__like" type="button"><img class="group__like-icon" src="./images/like.svg" alt="Отметить как понравившееся"></button>
-        </article>
-        <article class="group__rectangle">
-            <img src="./images/kamchatka.jpg" class="group__image" alt="Камчатка">
-            <h2 class="group__name" title="Камчатка">Камчатка</h2>
-            <button class="group__like" type="button"><img class="group__like-icon" src="./images/like.svg" alt="Отметить как понравившееся"></button>
-        </article>
-        <article class="group__rectangle">
-            <img src="./images/onega-lake.jpg" class="group__image" alt="Онежское озеро">
-            <h2 class="group__name" title="Онежское озеро">Онежское озеро</h2>
-            <button class="group__like" type="button"><img class="group__like-icon" src="./images/like.svg" alt="Отметить как понравившееся"></button>
-        </article>
-        <article class="group__rectangle">
-            <img src="./images/park-monrepo.jpg" class="group__image" alt="Парк Монрепо">
-            <h2 class="group__name" title="Парк Монрепо">Парк Монрепо</h2>
-            <button class="group__like" type="button"><img class="group__like-icon" src="./images/like.svg" alt="Отметить как понравившееся"></button>
-        </article>
-        <article class="group__rectangle">
-            <img src="./images/tulinovka.jpg" class="group__image" alt="Тулиновка">
-            <h2 class="group__name" title="Тулиновка">Тулиновка</h2>
-            <button class="group__like" type="button"><img class="group__like-icon" src="./images/like.svg" alt="Отметить как понравившееся"></button>
-        </article>
+        <template id="group__cards">
+            <article class="group__rectangle">
+                <img class="group__image">
+                <button class="group__delete-icon" type="button"></button>
+                <h2 class="group__name"></h2>
+                <button class="group__like" type="button">
+                    <img class="group__like-icon" src="./images/like.svg" alt="Отметить как понравившееся">
+                </button>
+            </article>
+        </template>
     </section>
     </main>
-    <div class="popup">
+    <div class="popup popup_background_form">
         <div class="popup__container">
             <button class="popup__close-icon" type="button"></button>
             <form class="popup__form" name="profile-form">
@@ -63,9 +43,32 @@
             </form>
         </div>
     </div>
+    <div class="popup popup_background_form">
+        <div class="popup__container">
+            <button class="popup__close-icon" type="button"></button>
+            <form class="popup__form" name="card-form">
+                <h2 class="popup__title">Новое место</h2>
+                <input class="popup__text" type="text" name="card-form-name" placeholder="Название">
+                <input class="popup__text" type="text" name="card-form-link"
+                 placeholder="Ссылка на картинку">
+                <input class="popup__submit" type="submit" value="Создать">
+            </form>
+        </div>
+    </div>
+    <div class="popup popup_background_fullscreen">
+        <figure class="popup__fullscreen">
+            <button class="popup__close-icon" type="button"></button>
+            <img class="popup__fullscreen-image" src="./images/fullscreen-picture-default.svg" alt="Изображение в полноэкранном режиме">
+            <figcaption class="popup__fullscreen-caption"></figcaption>
+        </figure>
+    </div>
     <footer class="footer">
         <p class="footer__copy">&copy; 2020 Mesto Russia</p>
     </footer>
-    <script src="./scripts/popup.js"></script>
+    <script src="./scripts/cardsArray.js"></script>
+    <script src="./scripts/globalVariables.js"></script>
+    <script src="./scripts/cards.js"></script>
+    <script src="./scripts/popups.js"></script>
+    <script src="./scripts/index.js"></script>
 </body>
 </html>
